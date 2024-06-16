@@ -137,7 +137,7 @@ def read_pair(subset_id: int, db: Session = Depends(get_db)):
     return db_subset
 
 
-@app.post("/subsets/")  # , response_model=list[schemas.Subset])
+@app.post("/subsets/")
 def create_subset(
     pair_ids: list[int],
     data_subset_id: int,
